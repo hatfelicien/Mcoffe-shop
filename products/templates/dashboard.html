@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | MomyShop</title>
+    <style>
+        body { font-family: Arial; background: #f7f3ef; padding: 30px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
+        th { background: #3e2723; color: white; }
+        a { text-decoration: none; margin: 0 5px; }
+        .btn { padding: 6px 12px; border-radius: 4px; }
+        .add { background: green; color: white; }
+        .edit { background: orange; color: white; }
+        .delete { background: red; color: white; }
+    </style>
+</head>
+<body>
+
+<h1>Product Dashboard</h1>
+
+<a href="{% url 'add_product' %}" class="btn add">➕ Add Product</a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        <td>
+            <a href="{% url 'edit_product' product.id %}" class="btn edit">Edit</a>
+            <a href="{% url 'delete_product' product.id %}" class="btn delete"
+               onclick="return confirm('Delete this product?')">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

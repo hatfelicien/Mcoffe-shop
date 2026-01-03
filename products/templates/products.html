@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MomyShop | Premium Coffee Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f7f3ef;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #3e2723;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 26px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5)
+            ),
+            url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero a {
+            padding: 14px 28px;
+            background-color: #6d4c41;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .hero a:hover {
+            background-color: #5d4037;
+        }
+
+        /* SECTION */
+        .container {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* PRODUCTS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 15px 0 5px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6d4c41;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #5d4037;
+        }
+
+        /* TRUST */
+        .trust {
+            background-color: #fff;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .trust-item {
+            padding: 20px;
+        }
+
+        .trust-item h3 {
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #3e2723;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h1>MomyShop ☕</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/product/">Products</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Premium Coffee, Made for You</h2>
+    <p>Discover rich flavors, handcrafted blends, and the perfect cup for every moment.</p>
+    <a href="#products">Shop Now</a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="container" id="products">
+    <div class="section-title">
+        <h2>Our Best Sellers</h2>
+        <p>Freshly brewed happiness in every cup</p>
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+            <h3>Espresso</h3>
+            <p>Strong, bold and full of energy.</p>
+            <div class="price">$3.00</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1523942839745-7848d6f7b61a">
+            <h3>Cappuccino</h3>
+            <p>Perfect balance of milk and foam.</p>
+            <div class="price">$4.50</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e">
+            <h3>Latte</h3>
+            <p>Smooth, creamy, and comforting.</p>
+            <div class="price">$4.00</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+            <h3>Iced Coffee</h3>
+            <p>Refreshing coffee for hot days.</p>
+            <div class="price">$3.50</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+    <h2>Why Choose MomyShop?</h2>
+    <div class="trust-items">
+        <div class="trust-item">
+            <h3>☕ Premium Beans</h3>
+            <p>Carefully selected, high-quality coffee beans.</p>
+        </div>
+        <div class="trust-item">
+            <h3>🚚 Fast Delivery</h3>
+            <p>Quick and reliable delivery to your doorstep.</p>
+        </div>
+        <div class="trust-item">
+            <h3>❤️ Loved by Customers</h3>
+            <p>Trusted by coffee lovers everywhere.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 MomyShop</p>
+    <p>Fresh Coffee. Real Taste.</p>
+</footer>
+
+</body>
+</html>
