@@ -4,7 +4,10 @@
     <title>Dashboard | MomyShop</title>
     <style>
         body { font-family: Arial; background: #f7f3ef; padding: 30px; }
-        h1 { text-align: center; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        h1 { margin: 0; }
+        .user-info { color: #3e2723; }
+        .logout-btn { background: #d32f2f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
         th { background: #3e2723; color: white; }
@@ -17,7 +20,13 @@
 </head>
 <body>
 
-<h1>Product Dashboard</h1>
+<div class="header">
+    <h1>Product Dashboard</h1>
+    <div class="user-info">
+        Welcome, {{ user.username }}! 
+        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+    </div>
+</div>
 
 <a href="{% url 'add_product' %}" class="btn add">➕ Add Product</a>
 
